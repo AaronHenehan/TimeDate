@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/timedate_destination">
+
+    <!-- Search Fragment -->
+    <fragment
+        android:id="@+id/timedate_destination"
+        android:name="com.aaronhenehan.timedate.ui.timedate.TimeDateFragment"
+        android:label="fragment_timedate"
+        tools:layout="@layout/fragment_timedate">
+        <action
+            android:id="@+id/action_timedate_to_results"
+            app:destination="@id/results_destination"
+            app:launchSingleTop="true"
+            app:enterAnim="@anim/slide_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Results Fragment -->
+    <fragment
+        android:id="@+id/results_destination"
+        android:name="com.aaronhenehan.timedate.ui.photodisplay.PhotoResultsFragment"
+        android:label="fragment_photo_results"
+        tools:layout="@layout/fragment_photo_results">
+
+        <action
+            android:id="@+id/action_photo_results_to_timedate"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/timedate_destination" />
+        <argument
+            android:name="searchTerm"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+
+</navigation>

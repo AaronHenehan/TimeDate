@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TimeDate</string>
+    <string name="search">Search</string>
+    <string name="search_flickr">Search Flicker</string>
+    <string name="search_by_tag">Search by tags</string>
+    <string name="tag_hint">Enter search tags, separate by comma</string>
+    <string name="search_photos_by">Flickr Results by %s</string>
+    <string name="search_by_date_upload">Search by date uploaded</string>
+</resources>
